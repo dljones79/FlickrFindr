@@ -24,9 +24,36 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'androidx.appcompat:appcompat:1.0.2'
-    implementation 'androidx.core:core-ktx:1.0.2'
+
+    // Implementation
+    implementation defaultDeps.androidx.appcompat
+    implementation defaultDeps.androidx.constraintlayout
+    implementation defaultDeps.androidx.core
+    implementation defaultDeps.androidx.legacy
+    implementation defaultDeps.androidx.recyclerview
+
+    implementation defaultDeps.glide.core
+    implementation defaultDeps.glide.okhttp
+
+    implementation defaultDeps.google.gson
+    implementation defaultDeps.google.material
+
+    implementation defaultDeps.kotlin.stdlib
+
+    implementation defaultDeps.logging.timber
+
+    implementation defaultDeps.misc.dagger
+
+    implementation defaultDeps.rx.android
+    implementation defaultDeps.rx.java
+    implementation defaultDeps.rx.binding
+
+    implementation defaultDeps.squareup.adapterrxjava2
+    implementation defaultDeps.squareup.convertergson
+    implementation defaultDeps.squareup.converterscalars
+    implementation defaultDeps.squareup.logginginterceptor
+    implementation defaultDeps.squareup.retrofit
+
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'

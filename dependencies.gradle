@@ -1,0 +1,48 @@
+def supportLibraryVersion = "1.0.0-beta01"
+def retrofitVersion = "2.4.0"
+def glideVersion = "4.8.0"
+def daggerVersion = "2.15"
+
+ext.defaultDeps = [
+        androidx    : [
+                core                : "androidx.core:core-ktx:$supportLibraryVersion",
+                appcompat           : "androidx.appcompat:appcompat:$supportLibraryVersion",
+                constraintlayout    : "androidx.constraintlayout:constraintlayout:1.1.3",
+                legacy              : "androidx.legacy:legacy-support-v4:$supportLibraryVersion",
+                recyclerview        : "androidx.recyclerview:recyclerview:$supportLibraryVersion",
+        ],
+        glide       : [
+                core                : "com.github.bumptech.glide:glide:$glideVersion",
+                okhttp              : "com.github.bumptech.glide:okhttp3-integration:$glideVersion",
+        ],
+        google      : [
+                gson                : 'com.google.code.gson:gson:2.8.2',
+                material            : "com.google.android.material:material:$supportLibraryVersion",
+        ],
+        kotlin   : [
+                stdlib              : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion",
+        ],
+        logging  : [
+                timber              : 'com.jakewharton.timber:timber:4.7.1',
+        ],
+        misc        : [
+                dagger              : "com.google.dagger:dagger:$daggerVersion",
+        ],
+        rx          : [
+                android             : 'io.reactivex.rxjava2:rxandroid:2.0.2',
+                binding             : 'com.jakewharton.rxbinding2:rxbinding:2.1.1',
+                java                : 'io.reactivex.rxjava2:rxjava:2.1.11',
+        ],
+        squareup : [
+                adapterrxjava2      : "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion",
+                convertergson       : "com.squareup.retrofit2:converter-gson:$retrofitVersion",
+                converterscalars    : "com.squareup.retrofit2:converter-scalars:$retrofitVersion",
+                logginginterceptor  : "com.squareup.okhttp3:logging-interceptor:3.11.0",
+                retrofit            : "com.squareup.retrofit2:retrofit:$retrofitVersion",
+        ],
+]
+
+ext.kaptDeps = [
+        dagger                      : "com.google.dagger:dagger-compiler:$daggerVersion",
+        glide                       : "com.github.bumptech.glide:compiler:$glideVersion",
+]
